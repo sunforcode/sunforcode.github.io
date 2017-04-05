@@ -87,19 +87,31 @@
 
 
 <meta name="description" content="一个Unity的BUG1ProductName was compiled with optimization - stepping may behave oddly; variables may not be available.
-解决方法:">
+解决方法: 
+
+修改一: unityVIewControllerBaseIos.mm中的shoulautoRotate 控制了点开摄像头的旋转与否
+
+修改二: 在导出u">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UnityBug">
 <meta property="og:url" content="http://yoursite.com/2017/02/28/UnityBug/index.html">
 <meta property="og:site_name" content="SunYongji">
 <meta property="og:description" content="一个Unity的BUG1ProductName was compiled with optimization - stepping may behave oddly; variables may not be available.
-解决方法:">
+解决方法: 
+
+修改一: unityVIewControllerBaseIos.mm中的shoulautoRotate 控制了点开摄像头的旋转与否
+
+修改二: 在导出u">
 <meta property="og:image" content="http://okzs58u17.bkt.clouddn.com/Snip20170228_5.png">
-<meta property="og:updated_time" content="2017-02-28T08:11:42.000Z">
+<meta property="og:updated_time" content="2017-04-05T03:01:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UnityBug">
 <meta name="twitter:description" content="一个Unity的BUG1ProductName was compiled with optimization - stepping may behave oddly; variables may not be available.
-解决方法:">
+解决方法: 
+
+修改一: unityVIewControllerBaseIos.mm中的shoulautoRotate 控制了点开摄像头的旋转与否
+
+修改二: 在导出u">
 <meta name="twitter:image" content="http://okzs58u17.bkt.clouddn.com/Snip20170228_5.png">
 
 
@@ -375,6 +387,12 @@
       
         <h1 id="一个Unity的BUG"><a href="#一个Unity的BUG" class="headerlink" title="一个Unity的BUG"></a>一个Unity的BUG</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ProductName was compiled with optimization - stepping may behave oddly; variables may not be available.</div></pre></td></tr></table></figure>
 <p>解决方法:<br><img src="http://okzs58u17.bkt.clouddn.com/Snip20170228_5.png" alt="Alt text"> </p>
+<ul>
+<li><p>修改一: unityVIewControllerBaseIos.mm中的<br>shoulautoRotate 控制了点开摄像头的旋转与否</p>
+</li>
+<li><p>修改二: 在导出unity工程的时候,要在buildsettig 里面把程序所支持的方向,选为maskall,然后在unity导出的工程中在修改一中的设置为No<br>###<br>if(Event.current.isMouse &amp;&amp; Event.current.type == EventType.MouseDown &amp;&amp; Event.current.clickCount == 2){<br>print(“double click”);<br>MainBody.isKinematic = true;<br>MainBody.GetComponent<boxcollider> ().enabled = false;<br>}<br>###</boxcollider></p>
+</li>
+</ul>
 
       
     </div>
