@@ -88,38 +88,38 @@
 
 <meta name="description" content="Unity和Xcode项目融合全记录选取的Unity项目为演示demo： vefuriaDemo
 选取的Xcode项目为Mrc项目的最近最近一次提交
-##第一步 Unity项目的一些设置
-将unity项目导出成iOS的原生项目
+第一步 Unity项目的一些设置将unity项目导出成iOS的原生项目
 需要注意的几个地方： 
 
 在Player Settings 中设置scrit engine
 设置unity中是否显示logo和设置自定义启动画面
-设置bundleId等操作">
+设置bundleId等操作
+设置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Unity和Xcode项目融合全纪录">
 <meta property="og:url" content="http://yoursite.com/2017/04/06/Unity和Xcode项目融合全纪录/index.html">
 <meta property="og:site_name" content="SunYongji">
 <meta property="og:description" content="Unity和Xcode项目融合全记录选取的Unity项目为演示demo： vefuriaDemo
 选取的Xcode项目为Mrc项目的最近最近一次提交
-##第一步 Unity项目的一些设置
-将unity项目导出成iOS的原生项目
+第一步 Unity项目的一些设置将unity项目导出成iOS的原生项目
 需要注意的几个地方： 
 
 在Player Settings 中设置scrit engine
 设置unity中是否显示logo和设置自定义启动画面
-设置bundleId等操作">
-<meta property="og:updated_time" content="2017-04-06T10:20:05.000Z">
+设置bundleId等操作
+设置">
+<meta property="og:updated_time" content="2017-04-06T10:25:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity和Xcode项目融合全纪录">
 <meta name="twitter:description" content="Unity和Xcode项目融合全记录选取的Unity项目为演示demo： vefuriaDemo
 选取的Xcode项目为Mrc项目的最近最近一次提交
-##第一步 Unity项目的一些设置
-将unity项目导出成iOS的原生项目
+第一步 Unity项目的一些设置将unity项目导出成iOS的原生项目
 需要注意的几个地方： 
 
 在Player Settings 中设置scrit engine
 设置unity中是否显示logo和设置自定义启动画面
-设置bundleId等操作">
+设置bundleId等操作
+设置">
 
 
 
@@ -394,8 +394,7 @@
       
         <h1 id="Unity和Xcode项目融合全记录"><a href="#Unity和Xcode项目融合全记录" class="headerlink" title="Unity和Xcode项目融合全记录"></a>Unity和Xcode项目融合全记录</h1><p>选取的Unity项目为演示demo： vefuriaDemo</p>
 <p>选取的Xcode项目为Mrc项目的最近最近一次提交</p>
-<p>##第一步 Unity项目的一些设置</p>
-<p>将unity项目导出成iOS的原生项目</p>
+<h2 id="第一步-Unity项目的一些设置"><a href="#第一步-Unity项目的一些设置" class="headerlink" title="第一步 Unity项目的一些设置"></a>第一步 Unity项目的一些设置</h2><p>将unity项目导出成iOS的原生项目</p>
 <p>需要注意的几个地方： </p>
 <ul>
 <li>在Player Settings 中设置scrit engine</li>
@@ -404,8 +403,7 @@
 <li>设置unity项目支持的旋转方向，最好设置为四个方向都支持，以为2.0项目是支持旋转屏幕的，如果不选择四个方向的话可能出现崩溃的问题</li>
 <li>Target SDK 选择是模拟器运行还是真机运行</li>
 </ul>
-<p>##第二步 开始融合</p>
-<h3 id="1-在原生项目中添加unity项目的文件"><a href="#1-在原生项目中添加unity项目的文件" class="headerlink" title="1.在原生项目中添加unity项目的文件"></a>1.在原生项目中添加unity项目的文件</h3><ul>
+<h2 id="第二步-开始融合"><a href="#第二步-开始融合" class="headerlink" title="第二步 开始融合"></a>第二步 开始融合</h2><h3 id="1-在原生项目中添加unity项目的文件"><a href="#1-在原生项目中添加unity项目的文件" class="headerlink" title="1.在原生项目中添加unity项目的文件"></a>1.在原生项目中添加unity项目的文件</h3><ul>
 <li>原项目中创建一个LoadAR的文件夹</li>
 <li>将对应的文件拖入到这个文件夹中</li>
 <li>MapFileParser.sh 这个文件在项目目录中没有显示，但是要放到LoadAR中</li>
@@ -416,12 +414,10 @@
 <li>Classes和Libraries要用黄色文件夹 group添加到项目中 ，classes文件和原项目中的classes会造成冲突，所以改为UnityClasses，其中classes中文件特别多，拖入的时候会造成卡顿，需要一些耐心</li>
 </ul>
 </blockquote>
-<p>###2.在原生项目中添加对应的框架</p>
-<blockquote>
+<h3 id="2-在原生项目中添加对应的框架"><a href="#2-在原生项目中添加对应的框架" class="headerlink" title="2.在原生项目中添加对应的框架"></a>2.在原生项目中添加对应的框架</h3><blockquote>
 <p>对照着Unity项目中的框架一个个添加</p>
 </blockquote>
-<p>###3.对应着unity项目修改BuildSettings</p>
-<ul>
+<h3 id="3-对应着unity项目修改BuildSettings"><a href="#3-对应着unity项目修改BuildSettings" class="headerlink" title="3.对应着unity项目修改BuildSettings"></a>3.对应着unity项目修改BuildSettings</h3><ul>
 <li>修改pch文件,将unity中的Prefix.pch中的代码全部复制到自己的E_Publishing_Prefix.pch中</li>
 <li>修改Other Linker Flags 将unity中设置复制到原生项目中</li>
 <li>write link map file</li>
@@ -440,12 +436,10 @@
 <blockquote>
 <p>注意修改路径的时候的修改正确</p>
 </blockquote>
-<p>###4.修改Build Phases</p>
-<blockquote>
+<h3 id="4-修改Build-Phases"><a href="#4-修改Build-Phases" class="headerlink" title="4.修改Build Phases"></a>4.修改Build Phases</h3><blockquote>
 <p>添加Run Script 对照图修改 注意修改路径 LoadAR</p>
 </blockquote>
-<p>##第三步 修改编译报错</p>
-<p>修改了C++11以后 所有的.mm文件的编译都将变严格,众多类型不匹配的问题需要修改</p>
+<h2 id="第三步-修改编译报错"><a href="#第三步-修改编译报错" class="headerlink" title="第三步 修改编译报错"></a>第三步 修改编译报错</h2><p>修改了C++11以后 所有的.mm文件的编译都将变严格,众多类型不匹配的问题需要修改</p>
 <ul>
 <li>Cannot use ‘@throw’ with Objective-C exceptions disabled</li>
 </ul>
@@ -458,21 +452,16 @@
 <blockquote>
 <p>直接编译器修改</p>
 </blockquote>
-<p>##第四步</p>
-<h3 id="1-修改main"><a href="#1-修改main" class="headerlink" title="1.修改main"></a>1.修改main</h3><ul>
+<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><h3 id="1-修改main"><a href="#1-修改main" class="headerlink" title="1.修改main"></a>1.修改main</h3><ul>
 <li>将unity项目中的maim.mm中的代码全部覆盖到原生项目的main.m中</li>
 <li>将main.mm跟项目的关系解除或者直接删了</li>
 <li>将main.m改为main.mm</li>
 </ul>
-<p>##第五步 到此为止 build success</p>
-<p>##第六步 修改Unity项目中的部分文件为arc编译(可选)</p>
-<blockquote>
+<h2 id="第五步-到此为止-build-success"><a href="#第五步-到此为止-build-success" class="headerlink" title="第五步 到此为止 build success"></a>第五步 到此为止 build success</h2><h2 id="第六步-修改Unity项目中的部分文件为arc编译-可选"><a href="#第六步-修改Unity项目中的部分文件为arc编译-可选" class="headerlink" title="第六步 修改Unity项目中的部分文件为arc编译(可选)"></a>第六步 修改Unity项目中的部分文件为arc编译(可选)</h2><blockquote>
 <p>在unity项目中的build phases -&gt; compile sources 搜索所有的.m 或者.mm 文件 在原有项目将对应的文件打上 -fobjc-arc</p>
 </blockquote>
-<p>##第七步  自定义启动unity</p>
-<p>到这里就可以在原生项目中直接运行unity的项目了,但是要做到自定启动unity还要做下一步的操作</p>
-<p>###1.修改unity界面不自己立即启动</p>
-<ul>
+<h2 id="第七步-自定义启动unity"><a href="#第七步-自定义启动unity" class="headerlink" title="第七步  自定义启动unity"></a>第七步  自定义启动unity</h2><p>到这里就可以在原生项目中直接运行unity的项目了,但是要做到自定启动unity还要做下一步的操作</p>
+<h3 id="1-修改unity界面不自己立即启动"><a href="#1-修改unity界面不自己立即启动" class="headerlink" title="1.修改unity界面不自己立即启动"></a>1.修改unity界面不自己立即启动</h3><ul>
 <li>在UnityAppController.mm中修改</li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> <span class="keyword">bool</span>	_startUnityScheduled	= <span class="literal">true</span>;<span class="comment">//按照计划表来启动 ,true的话就是按照自定义时刻启动 默认是false</span></div></pre></td></tr></table></figure>
@@ -540,10 +529,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/06/Unity和Xcode项目融合全纪录~/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -617,7 +602,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -720,7 +705,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity和Xcode项目融合全记录"><span class="nav-number">1.</span> <span class="nav-text">Unity和Xcode项目融合全记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在原生项目中添加unity项目的文件"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.在原生项目中添加unity项目的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改main"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.修改main</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-自定义启动unity时刻"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.自定义启动unity时刻</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity和Xcode项目融合全记录"><span class="nav-number">1.</span> <span class="nav-text">Unity和Xcode项目融合全记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步-Unity项目的一些设置"><span class="nav-number">1.1.</span> <span class="nav-text">第一步 Unity项目的一些设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步-开始融合"><span class="nav-number">1.2.</span> <span class="nav-text">第二步 开始融合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在原生项目中添加unity项目的文件"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.在原生项目中添加unity项目的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-在原生项目中添加对应的框架"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.在原生项目中添加对应的框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对应着unity项目修改BuildSettings"><span class="nav-number">1.2.3.</span> <span class="nav-text">3.对应着unity项目修改BuildSettings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改Build-Phases"><span class="nav-number">1.2.4.</span> <span class="nav-text">4.修改Build Phases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步-修改编译报错"><span class="nav-number">1.3.</span> <span class="nav-text">第三步 修改编译报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步"><span class="nav-number">1.4.</span> <span class="nav-text">第四步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改main"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.修改main</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步-到此为止-build-success"><span class="nav-number">1.5.</span> <span class="nav-text">第五步 到此为止 build success</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六步-修改Unity项目中的部分文件为arc编译-可选"><span class="nav-number">1.6.</span> <span class="nav-text">第六步 修改Unity项目中的部分文件为arc编译(可选)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七步-自定义启动unity"><span class="nav-number">1.7.</span> <span class="nav-text">第七步  自定义启动unity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改unity界面不自己立即启动"><span class="nav-number">1.7.1.</span> <span class="nav-text">1.修改unity界面不自己立即启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-自定义启动unity时刻"><span class="nav-number">1.7.2.</span> <span class="nav-text">3.自定义启动unity时刻</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
