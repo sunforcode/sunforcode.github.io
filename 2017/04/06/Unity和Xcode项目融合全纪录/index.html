@@ -1,0 +1,1011 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="SunYongji" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Unity和Xcode项目融合全记录选取的Unity项目为演示demo： vefuriaDemo
+选取的Xcode项目为Mrc项目的最近最近一次提交
+##第一步 Unity项目的一些设置
+将unity项目导出成iOS的原生项目
+需要注意的几个地方： 
+
+在Player Settings 中设置scrit engine
+设置unity中是否显示logo和设置自定义启动画面
+设置bundleId等操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity和Xcode项目融合全纪录">
+<meta property="og:url" content="http://yoursite.com/2017/04/06/Unity和Xcode项目融合全纪录/index.html">
+<meta property="og:site_name" content="SunYongji">
+<meta property="og:description" content="Unity和Xcode项目融合全记录选取的Unity项目为演示demo： vefuriaDemo
+选取的Xcode项目为Mrc项目的最近最近一次提交
+##第一步 Unity项目的一些设置
+将unity项目导出成iOS的原生项目
+需要注意的几个地方： 
+
+在Player Settings 中设置scrit engine
+设置unity中是否显示logo和设置自定义启动画面
+设置bundleId等操作">
+<meta property="og:updated_time" content="2017-04-06T10:20:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity和Xcode项目融合全纪录">
+<meta name="twitter:description" content="Unity和Xcode项目融合全记录选取的Unity项目为演示demo： vefuriaDemo
+选取的Xcode项目为Mrc项目的最近最近一次提交
+##第一步 Unity项目的一些设置
+将unity项目导出成iOS的原生项目
+需要注意的几个地方： 
+
+在Player Settings 中设置scrit engine
+设置unity中是否显示logo和设置自定义启动画面
+设置bundleId等操作">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Summer'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/06/Unity和Xcode项目融合全纪录/"/>
+
+
+
+
+
+  <title> Unity和Xcode项目融合全纪录 | SunYongji </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f7e47c40d7b22b61dbf4396315f0e3b3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">SunYongji</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/06/Unity和Xcode项目融合全纪录/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="SunYongji">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://okzs58u17.bkt.clouddn.com/head.jpeg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="SunYongji">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="SunYongji" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Unity和Xcode项目融合全纪录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-06T18:19:45+08:00">
+                2017-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/06/Unity和Xcode项目融合全纪录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/06/Unity和Xcode项目融合全纪录/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/04/06/Unity和Xcode项目融合全纪录/" class="leancloud_visitors" data-flag-title="Unity和Xcode项目融合全纪录">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Unity和Xcode项目融合全记录"><a href="#Unity和Xcode项目融合全记录" class="headerlink" title="Unity和Xcode项目融合全记录"></a>Unity和Xcode项目融合全记录</h1><p>选取的Unity项目为演示demo： vefuriaDemo</p>
+<p>选取的Xcode项目为Mrc项目的最近最近一次提交</p>
+<p>##第一步 Unity项目的一些设置</p>
+<p>将unity项目导出成iOS的原生项目</p>
+<p>需要注意的几个地方： </p>
+<ul>
+<li>在Player Settings 中设置scrit engine</li>
+<li>设置unity中是否显示logo和设置自定义启动画面</li>
+<li>设置bundleId等操作</li>
+<li>设置unity项目支持的旋转方向，最好设置为四个方向都支持，以为2.0项目是支持旋转屏幕的，如果不选择四个方向的话可能出现崩溃的问题</li>
+<li>Target SDK 选择是模拟器运行还是真机运行</li>
+</ul>
+<p>##第二步 开始融合</p>
+<h3 id="1-在原生项目中添加unity项目的文件"><a href="#1-在原生项目中添加unity项目的文件" class="headerlink" title="1.在原生项目中添加unity项目的文件"></a>1.在原生项目中添加unity项目的文件</h3><ul>
+<li>原项目中创建一个LoadAR的文件夹</li>
+<li>将对应的文件拖入到这个文件夹中</li>
+<li>MapFileParser.sh 这个文件在项目目录中没有显示，但是要放到LoadAR中</li>
+</ul>
+<blockquote>
+<ul>
+<li>导出来的Unity项目的项目结构如图所示，其中 QCAR Vuforia 和 data要用文件夹的形式添加到项目中</li>
+<li>Classes和Libraries要用黄色文件夹 group添加到项目中 ，classes文件和原项目中的classes会造成冲突，所以改为UnityClasses，其中classes中文件特别多，拖入的时候会造成卡顿，需要一些耐心</li>
+</ul>
+</blockquote>
+<p>###2.在原生项目中添加对应的框架</p>
+<blockquote>
+<p>对照着Unity项目中的框架一个个添加</p>
+</blockquote>
+<p>###3.对应着unity项目修改BuildSettings</p>
+<ul>
+<li>修改pch文件,将unity中的Prefix.pch中的代码全部复制到自己的E_Publishing_Prefix.pch中</li>
+<li>修改Other Linker Flags 将unity中设置复制到原生项目中</li>
+<li>write link map file</li>
+<li>head search path</li>
+<li>libra search path</li>
+<li>Other C Flags </li>
+<li>C++ language dialect</li>
+<li>C++ standard Library</li>
+<li>enable C++ runtime Types</li>
+<li>enable Object-c extensions</li>
+<li>overriding deprecated Objecet-c methods</li>
+<li>GCC_USE_INDIRECT_FUNCTION_CALLS</li>
+<li>UNITY_RUNTIME_VERSION</li>
+<li>UNITY_SCRIPTING_BACKEND</li>
+</ul>
+<blockquote>
+<p>注意修改路径的时候的修改正确</p>
+</blockquote>
+<p>###4.修改Build Phases</p>
+<blockquote>
+<p>添加Run Script 对照图修改 注意修改路径 LoadAR</p>
+</blockquote>
+<p>##第三步 修改编译报错</p>
+<p>修改了C++11以后 所有的.mm文件的编译都将变严格,众多类型不匹配的问题需要修改</p>
+<ul>
+<li>Cannot use ‘@throw’ with Objective-C exceptions disabled</li>
+</ul>
+<blockquote>
+<p>将一步的修改 enable Object-c extensions 改回yes</p>
+</blockquote>
+<ul>
+<li>Unknown type name ‘il2cpp_z_Byte’; did you mean ‘il2cpp_z_uInt’?</li>
+</ul>
+<blockquote>
+<p>直接编译器修改</p>
+</blockquote>
+<p>##第四步</p>
+<h3 id="1-修改main"><a href="#1-修改main" class="headerlink" title="1.修改main"></a>1.修改main</h3><ul>
+<li>将unity项目中的maim.mm中的代码全部覆盖到原生项目的main.m中</li>
+<li>将main.mm跟项目的关系解除或者直接删了</li>
+<li>将main.m改为main.mm</li>
+</ul>
+<p>##第五步 到此为止 build success</p>
+<p>##第六步 修改Unity项目中的部分文件为arc编译(可选)</p>
+<blockquote>
+<p>在unity项目中的build phases -&gt; compile sources 搜索所有的.m 或者.mm 文件 在原有项目将对应的文件打上 -fobjc-arc</p>
+</blockquote>
+<p>##第七步  自定义启动unity</p>
+<p>到这里就可以在原生项目中直接运行unity的项目了,但是要做到自定启动unity还要做下一步的操作</p>
+<p>###1.修改unity界面不自己立即启动</p>
+<ul>
+<li>在UnityAppController.mm中修改</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> <span class="keyword">bool</span>	_startUnityScheduled	= <span class="literal">true</span>;<span class="comment">//按照计划表来启动 ,true的话就是按照自定义时刻启动 默认是false</span></div></pre></td></tr></table></figure>
+<ul>
+<li>添加退出按钮</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">extern</span> <span class="string">"C"</span><span class="comment">//这个方法是在unity中声明的第一帧调用的方法</span></div><div class="line">&#123;</div><div class="line"><span class="keyword">void</span> UpdateFirstFrame() &#123;</div><div class="line">UnityAppController *appController =  (UnityAppController *)[<span class="built_in">UIApplication</span> sharedApplication].delegate;</div><div class="line">[appController addCustomBackToShelf];</div><div class="line">&#125;</div><div class="line"><span class="comment">// 对Unity中的unityToIOS方法进行实现</span></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>因为不知道怎么直接调用,所以用了这种间接的方法调用加载退出按钮</p>
+</blockquote>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)addCustomBackToShelf &#123;</div><div class="line"><span class="built_in">UIButton</span> *exitButton  = [[<span class="built_in">UIButton</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">50</span>, <span class="number">50</span>, <span class="number">100</span>, <span class="number">30</span>)];</div><div class="line">[exitButton setTitle:<span class="string">@"退出"</span> forState:<span class="built_in">UIControlStateNormal</span>];</div><div class="line">[exitButton addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(didClickExit) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</div><div class="line">[_unityView addSubview:exitButton];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###2.自定义启动画面(自定义rootviewController)<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>)<span class="built_in">UIViewController</span> *nativeRootViewController;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)applicationDidBecomeActive:(<span class="built_in">UIApplication</span>*)application</div><div class="line">&#123;</div><div class="line"></div><div class="line">::printf(<span class="string">"-&gt; applicationDidBecomeActive()\n"</span>);</div><div class="line"></div><div class="line">[<span class="keyword">self</span> removeSnapshotView];</div><div class="line"><span class="comment">//这就话就是自定义启动画面</span></div><div class="line">[<span class="keyword">self</span> addCustomView];</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span>(_unityAppReady)</div><div class="line">&#123;</div><div class="line"><span class="keyword">if</span>(UnityIsPaused() &amp;&amp; _wasPausedExternal == <span class="literal">false</span>)</div><div class="line">&#123;</div><div class="line">UnityWillResume();</div><div class="line">UnityPause(<span class="number">0</span>);</div><div class="line">&#125;</div><div class="line">UnitySetPlayerFocus(<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span> <span class="keyword">if</span>(!_startUnityScheduled)</div><div class="line">&#123;</div><div class="line">_startUnityScheduled = <span class="literal">true</span>;</div><div class="line">[<span class="keyword">self</span> performSelector:<span class="keyword">@selector</span>(startUnity:) withObject:application afterDelay:<span class="number">0</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line">_didResignActive = <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)addCustomView &#123;</div><div class="line"><span class="comment">//    userInfo = [UserInfo readLastLoginUser];</span></div><div class="line"><span class="keyword">self</span>.window = [[<span class="built_in">UIWindow</span> alloc]initWithFrame:[<span class="built_in">UIScreen</span> mainScreen].bounds];</div><div class="line"><span class="built_in">NSString</span> *storyBoardName =  isPad ? <span class="string">@"Main_iPad"</span>: <span class="string">@"Main_iPhone"</span>;</div><div class="line"></div><div class="line"><span class="built_in">UINavigationController</span> *navigation = [[<span class="built_in">UIStoryboard</span> storyboardWithName:storyBoardName bundle:<span class="literal">nil</span>] instantiateInitialViewController];</div><div class="line"><span class="keyword">self</span>.nativeRootViewController = navigation;</div><div class="line"><span class="keyword">self</span>.window.rootViewController = <span class="keyword">self</span>.nativeRootViewController;</div><div class="line">[<span class="keyword">self</span>.window makeKeyAndVisible];</div><div class="line">_rootController = <span class="keyword">self</span>.nativeRootViewController;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="3-自定义启动unity时刻"><a href="#3-自定义启动unity时刻" class="headerlink" title="3.自定义启动unity时刻"></a>3.自定义启动unity时刻</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)startUnity &#123;<span class="comment">//先要在.h中声明</span></div><div class="line"><span class="keyword">if</span> (isFirstStartUnity) &#123;<span class="comment">//第一次启动Unity</span></div><div class="line">[<span class="keyword">self</span> startUnity:[<span class="built_in">UIApplication</span> sharedApplication]];</div><div class="line">isFirstStartUnity = <span class="literal">NO</span>;</div><div class="line">&#125;<span class="keyword">else</span> &#123;</div><div class="line">_window.rootViewController = _rootController;</div><div class="line">_rootView.hidden = <span class="literal">NO</span>;</div><div class="line">[_window makeKeyAndVisible];</div><div class="line"><span class="keyword">if</span> (_didResignActive) &#123;</div><div class="line">UnityPause(<span class="number">0</span>);</div><div class="line">_didResignActive = <span class="literal">NO</span>;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>退出到自定义界面</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一句话是要在别的控制器知道退出的事件,</span></div><div class="line">[[<span class="built_in">NSNotificationCenter</span> defaultCenter]postNotificationName:<span class="string">@"exitUnity"</span> object:<span class="literal">nil</span>];</div><div class="line"><span class="comment">//下面是关键代码</span></div><div class="line">UnityPause(<span class="number">1</span>);</div><div class="line">_didResignActive = <span class="literal">YES</span>;</div><div class="line">_window.rootViewController = <span class="keyword">self</span>.nativeRootViewController;</div><div class="line">_rootView.hidden = <span class="literal">YES</span>;</div><div class="line">[_window makeKeyAndVisible];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###4.调用</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//需要把对应的控制器改为.mm</span></div><div class="line"><span class="meta">#import <span class="meta-string">"UnityAppController.h"</span></span></div><div class="line"></div><div class="line">[GetAppController() startUnity];</div></pre></td></tr></table></figure>
+<p>#附1: Unity和Xcode项目的互相调用<br>官方的<a href="https://docs.unity3d.com/Manual/PluginsForIOS.html" target="_blank" rel="external">Unity文档</a>.</p>
+<p>###1.unity调ios并传值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//unity脚本中的方法声明</div><div class="line">[DllImport (&quot;__Internal&quot;)]</div><div class="line">private static extern string GetIOSParamsFromNative();</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ios中的实现</span></div><div class="line"><span class="comment">//声明</span></div><div class="line"><span class="keyword">static</span> <span class="keyword">char</span> unityPath[<span class="number">2048</span>]; </div><div class="line"><span class="keyword">char</span> *unitymsg = <span class="literal">NULL</span>;</div><div class="line"><span class="keyword">extern</span> <span class="string">"C"</span></div><div class="line">&#123;</div><div class="line"><span class="comment">// 对Unity中的unityToIOS方法进行实现</span></div><div class="line"><span class="keyword">char</span> * GetIOSParamsFromNative()&#123;        </div><div class="line"><span class="keyword">if</span>(unitymsg == <span class="literal">NULL</span>)</div><div class="line">&#123;</div><div class="line">unitymsg = (<span class="keyword">char</span> *)calloc(<span class="number">1</span>, <span class="number">2048</span>);</div><div class="line">&#125;        </div><div class="line">memset(unitymsg, <span class="number">0</span>, <span class="number">2048</span>);</div><div class="line">strcpy(unitymsg, unityPath);        </div><div class="line"><span class="keyword">return</span> unitymsg;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>这个地方有几个问题要注意</p>
+</blockquote>
+<ul>
+<li>不能直接传string对象,因为这个地方传的是指针,指针传过去了,但是指针对应的内存空间被释放,所以直接传值会报错,上面的方法是一位老司机教导我的<smile></smile></li>
+<li>如果在unity中声明了,并不在ios中实现的话会报编译的错误</li>
+</ul>
+<p>###2.ios调用unity<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UnitySendMessage(&quot;GameObjectName1&quot;, &quot;MethodName1&quot;, &quot;Message to send&quot;);</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>第三个参数可以不传</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/29/动态修改屏幕方向/" rel="next" title="动态全局修改屏幕方向">
+                <i class="fa fa-chevron-left"></i> 动态全局修改屏幕方向
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/06/Unity和Xcode项目融合全纪录~/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/06/Unity和Xcode项目融合全纪录/"
+           data-title="Unity和Xcode项目融合全纪录" data-url="http://yoursite.com/2017/04/06/Unity和Xcode项目融合全纪录/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://okzs58u17.bkt.clouddn.com/head.jpeg"
+               alt="SunYongji" />
+          <p class="site-author-name" itemprop="name">SunYongji</p>
+          <p class="site-description motion-element" itemprop="description">记录撩妹的每一个细节</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/sunforcode" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5619691861" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/sunyongji" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.baidu.com" title="度娘" target="_blank">度娘</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity和Xcode项目融合全记录"><span class="nav-number">1.</span> <span class="nav-text">Unity和Xcode项目融合全记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在原生项目中添加unity项目的文件"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.在原生项目中添加unity项目的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改main"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.修改main</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-自定义启动unity时刻"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.自定义启动unity时刻</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017/01/17 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SunYongji</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye">访问总量</i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sunyongji"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("wJCjuHVoYp0guXl3e7vOCHfi-gzGzoHsz", "BmcolPhFRHXIgWRmIdASgisB");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
